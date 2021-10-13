@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  traefik-2:
+    image: traefik:v2.5
+    command: --api.insecure=true --providers.docker
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  client:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+
+  server:
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    ports:
+      - "5000:5000"
+
