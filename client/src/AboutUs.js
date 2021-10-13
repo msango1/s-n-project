@@ -1,4 +1,4 @@
-import react, { useEffect, useState} from "react";
+import { useEffect, useState} from "react";
 
 function AboutUs() {
 
@@ -11,11 +11,11 @@ function AboutUs() {
       }, [])
 
     return (
-        <div className="container m-8">
-        <h1>Welcome to the about us page</h1>            
-        <p>{backendData.header}</p>
+      <div className="bg-white p-4">        
+        <p className="font-sans text-3xl">{backendData.header}</p>
         <p>{backendData.body}</p>
-        </div>
+        <p className="font-sans text-lg text-red-400">{backendData.info}</p>
+      </div>
     )
 }
 

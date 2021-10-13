@@ -2,23 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Router, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './Home';
 import AboutUs from './AboutUs';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about-us">
-          <AboutUs />
-        </Route>
-      </Switch>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <div className="container m-8">
+  <div className="bg-blue-100 p-4">
+    <p>Logo</p>
+  </div>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about-us">
+            <AboutUs />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </React.StrictMode>
+  </div>,
   document.getElementById('root')
 );
 
