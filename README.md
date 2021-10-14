@@ -1,6 +1,6 @@
 # SIRKKA NETWORKS HOME PROJECT
 
-## Objective
+## OBJECTIVE
 The objective of this project is to create a Fullstack application in a Docker Swarm infrastructure.
 
 * Client Container
@@ -12,7 +12,8 @@ The objective of this project is to create a Fullstack application in a Docker S
     - Dockerfile
 
 * Traefik Container
-    -Traefik Proxy
+    - Traefik Proxy
+    - Traefik.yaml
 
 * Docker-compose.yml
     - Services infrastructure
