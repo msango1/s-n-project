@@ -1,5 +1,8 @@
-const express  = require('express')
-const app = express()
+const express  = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors());
 
 app.get("/home", (req, res) => {
     res.json({
@@ -7,7 +10,7 @@ app.get("/home", (req, res) => {
             body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
             info: `This content is pulled from the express app via the "/home" route.`
     })
-})
+});
 
 app.get("/about-us", (req, res) => {
     res.json({
